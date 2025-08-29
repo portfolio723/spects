@@ -35,7 +35,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       </CardContent>
       <CardFooter className="p-4 pt-0 flex justify-between items-center">
         <p className="text-lg font-semibold text-primary">
-          ${product.price.toFixed(2)}
+          ₹{product.price.toFixed(2)}
         </p>
         <Button asChild size="sm" variant="ghost" className="text-primary hover:text-primary">
           <Link href={`/products/${product.id}`}>

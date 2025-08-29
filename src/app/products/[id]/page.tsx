@@ -49,7 +49,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
               </div>
               <span className="text-muted-foreground text-sm">({product.reviews.length} reviews)</span>
             </div>
-            <p className="text-3xl font-semibold text-primary mb-6">${product.price.toFixed(2)}</p>
+            <p className="text-3xl font-semibold text-primary mb-6">₹{product.price.toFixed(2)}</p>
             
             <p className="text-base text-foreground/80 mb-6">{product.description}</p>
             

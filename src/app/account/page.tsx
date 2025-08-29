@@ -17,10 +17,10 @@ export default function AccountPage() {
             <CardHeader className="items-center text-center">
               <Avatar className="w-24 h-24 mb-4">
                 <AvatarImage src="https://picsum.photos/200" alt="User avatar" data-ai-hint="person portrait" />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarFallback>AD</AvatarFallback>
               </Avatar>
-              <CardTitle className="font-headline text-2xl">Jane Doe</CardTitle>
-              <CardDescription>jane.doe@example.com</CardDescription>
+              <CardTitle className="font-headline text-2xl">Aarav Doe</CardTitle>
+              <CardDescription>aarav.doe@example.com</CardDescription>
             </CardHeader>
             <CardContent className="mt-4">
               <Button variant="outline" className="w-full mb-4">Edit Profile</Button>
@@ -41,7 +41,7 @@ export default function AccountPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                   <div>
                     <p className="text-muted-foreground">First Name</p>
-                    <p className="font-medium">Jane</p>
+                    <p className="font-medium">Aarav</p>
                   </div>
                   <div>
                     <p className="text-muted-foreground">Last Name</p>
@@ -49,7 +49,7 @@ export default function AccountPage() {
                   </div>
                   <div>
                     <p className="text-muted-foreground">Email</p>
-                    <p className="font-medium">jane.doe@example.com</p>
+                    <p className="font-medium">aarav.doe@example.com</p>
                   </div>
                   <div>
                     <p className="text-muted-foreground">Member Since</p>
