@@ -5,6 +5,7 @@ import { Glasses, Heart, ShoppingCart, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { href: '/', label: 'Shop' },
@@ -15,7 +16,7 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-card shadow-md sticky top-0 z-40">
+    <header className="bg-card/80 backdrop-blur-sm shadow-md sticky top-0 z-40">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-2">
@@ -34,6 +35,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild>
               <Link href="/account#favorites">
                 <Heart className="h-5 w-5" />
@@ -41,7 +43,13 @@ export default function Header() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon">
-              <ShoppingCart className="h-5 w-5" />
+              <div className="relative">
+                <ShoppingCart className="h-5 w-5" />
+                <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                </span>
+              </div>
               <span className="sr-only">Shopping Cart</span>
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -52,7 +60,8 @@ export default function Header() {
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+             <ThemeToggle />
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
