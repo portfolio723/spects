@@ -8,6 +8,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 import type { Product } from '@/lib/types';
 
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id,
+  }));
+}
+
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const product: Product | undefined = products.find(p => p.id === params.id);
 
